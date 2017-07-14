@@ -1,0 +1,24 @@
+{
+    "name": "Nexone",
+    "description": "Nexone subtheme of Nex",
+    "repositories": [
+        {
+            "url": "git@git.nexthemes.co:wordpress/nex.git",
+            "type": "git"
+        },
+        {
+            "url": "git@git.nexthemes.co:wordpress/documentation.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "nexthemes/nex": "*",
+        "nexthemes/documentation": "*"
+    },
+    "scripts" : {
+        "post-update-cmd": [
+            "./vendor/bin/nex-post-update.sh",
+            "./vendor/bin/nex-documentation-post-update.sh"
+        ]
+    }
+}
